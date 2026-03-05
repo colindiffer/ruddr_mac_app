@@ -6,8 +6,8 @@ workflows:
 
     environment:
       node: 20
-      vars:
-        GH_TOKEN: $GH_TOKEN
+      groups:
+        - github
 
     scripts:
       - name: Install dependencies
