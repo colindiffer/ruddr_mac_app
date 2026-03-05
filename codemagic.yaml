@@ -15,7 +15,7 @@ workflows:
         script: sips -z 512 512 src/renderer/icons/icon256.png --out src/renderer/icons/icon512.png
 
       - name: Build DMG
-        script: npm run build
+        script: npx electron-builder --publish never
 
     artifacts:
       - dist/*.dmg
