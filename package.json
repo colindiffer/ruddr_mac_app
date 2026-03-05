@@ -12,7 +12,7 @@
     "appId": "com.ruddr.timetracker",
     "mac": {
       "target": "dmg",
-      "icon": "src/renderer/icons/icon256.png"
+      "icon": "src/renderer/icons/icon512.png"
     },
     "directories": {
       "output": "dist"

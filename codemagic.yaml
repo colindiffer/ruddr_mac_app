@@ -11,6 +11,9 @@ workflows:
       - name: Install dependencies
         script: npm install
 
+      - name: Generate 512x512 icon
+        script: sips -z 512 512 src/renderer/icons/icon256.png --out src/renderer/icons/icon512.png
+
       - name: Build DMG
         script: npm run build
 
