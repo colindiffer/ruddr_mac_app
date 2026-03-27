@@ -174,6 +174,11 @@ function createWindow() {
 
   mainWindow.loadFile(path.join(__dirname, '../renderer/index.html'));
 
+  // Show window once content is ready — avoids blank white screen on launch
+  mainWindow.once('ready-to-show', () => {
+    showWindow();
+  });
+
   // Hide instead of close when X is clicked (live in tray)
   mainWindow.on('close', (e) => {
     if (!isQuitting) {
@@ -210,8 +215,6 @@ app.whenReady().then(() => {
     store.set('autoStartSet', true);
   }
 
-  // Show window on first launch
-  showWindow();
 });
 
 // Don't quit when all windows are closed — app lives in tray
