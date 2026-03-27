@@ -1,6 +1,6 @@
 {
   "name": "ruddr-mac-app",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "description": "Ruddr Time Tracker Mac App",
   "main": "src/main/main.js",
   "scripts": {
